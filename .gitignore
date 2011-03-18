@@ -1,0 +1,10 @@
+*.o
+*.cmd
+*.swp
+*.ko
+*.symvers
+os/linux/.tmp_versions/
+os/linux/Makefile
+os/linux/modules.order
+os/linux/rt2870sta.mod.c
+tools/bin2h

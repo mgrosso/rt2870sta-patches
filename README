@@ -1,0 +1,6 @@
+This is my github fork of the ralink rt2870sta driver.  I'm only using it to
+keep track of the patches I needed to get it installed on a gentoo linux 2.6.37
+(vanilla kernel) laptop running with gcc 4.3.4.  Hopefully these changes will
+get pushed upstream.  They are Mostly Harmless.
+
+please see README_STA for the real README.

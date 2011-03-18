@@ -132,7 +132,11 @@ void *rausb_buffer_alloc(struct usb_device *dev,
 							gfp_t mem_flags,
 							dma_addr_t *dma)
 {
+#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,34)
+	return usb_alloc_coherent(dev, size, mem_flags, dma);
+#else 
 	return usb_buffer_alloc(dev, size, mem_flags, dma);
+#endif // LINUX_VERSION_CODE 2.6.34 //
 }
 EXPORT_SYMBOL(rausb_buffer_alloc);
 
@@ -142,7 +146,12 @@ void rausb_buffer_free(struct usb_device *dev,
 							void *addr,
 							dma_addr_t dma)
 {
+#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,34)
+	usb_free_coherent(dev, size, addr, dma);
+#else
 	usb_buffer_free(dev, size, addr, dma);
+#endif // LINUX_VERSION_CODE 2.6.34 //
+
 }
 EXPORT_SYMBOL(rausb_buffer_free);
 #endif // LINUX_VERSION_CODE //

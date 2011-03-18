@@ -700,7 +700,7 @@ Note:
 */
 static int CFG80211_TxPwrSet(
 	IN struct wiphy						*pWiphy,
-	IN enum tx_power_setting			Type,
+	IN int								Type,
 	IN int								dBm)
 {
 	return -EOPNOTSUPP;

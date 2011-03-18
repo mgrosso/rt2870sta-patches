@@ -8,10 +8,10 @@ HAS_QA_SUPPORT=n
 HAS_XLINK=n
 
 # Support Wpa_Supplicant
-HAS_WPA_SUPPLICANT=n
+HAS_WPA_SUPPLICANT=y
 
 # Support Native WpaSupplicant for Network Maganger
-HAS_NATIVE_WPA_SUPPLICANT_SUPPORT=n
+HAS_NATIVE_WPA_SUPPLICANT_SUPPORT=y
 
 #Support Net interface block while Tx-Sw queue full
 HAS_BLOCK_NET_IF=n
@@ -56,7 +56,7 @@ HAS_BGFP_SUPPORT=n
 HAS_BGFP_OPEN_SUPPORT=n
 
 #Support MAC80211 LINUX-only function
-HAS_CFG80211_SUPPORT=n
+HAS_CFG80211_SUPPORT=y
 
 #Support RFKILL hardware block/unblock LINUX-only function
 HAS_RFKILL_HW_SUPPORT=n
